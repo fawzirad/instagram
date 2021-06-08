@@ -5,7 +5,7 @@ import { db } from "./firebase";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { Button, Input } from "@material-ui/core";
-
+import {auth} from './firebase'
 function getModalStyle() {
   const top = 50;
   const left = 50;
@@ -37,7 +37,19 @@ function App() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
 
-  const signUp = (event) => {};
+  // function signUp event //
+  const signUp = (event) => {
+    auth.createUserWithEmailAndPassword(email, password)
+  .then((userCredential) => {
+    let user = userCredential.user;
+console.log(user);
+  })
+  .catch((error) => {
+    let errorCode = error.code;
+    let errorMessage = error.message;
+    // ..
+  });
+  };
 
   // UseEffect --> Runs a piece of code based on a specific condition
   useEffect(() => {
@@ -61,7 +73,7 @@ function App() {
     <div className="App">
       <Modal open={open} onClose={() => setOpen(false)}>
         <div style={modalStyle} className={classes.paper}>
-          <form>
+          <form className='app__signup'>
           <center>
             <img
               className="app__headerImage"
