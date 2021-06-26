@@ -142,8 +142,6 @@ function App() {
             
           </form>
 
-          
-          <h2>I am a modal</h2>
         </div>
       </Modal>
 
@@ -175,8 +173,6 @@ function App() {
             
           </form>
 
-          
-          <h2>I am a modal</h2>
         </div>
       </Modal>
 
