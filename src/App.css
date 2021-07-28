@@ -18,8 +18,16 @@
   justify-content: space-between;
 }
 
+.app__posts{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 .app__headerImage{
   object-fit: contain;
+  height: 40px;
 }
 
 
