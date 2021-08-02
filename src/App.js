@@ -200,6 +200,7 @@ function App() {
           {posts.map(({ id, post }) => (
             <Post
               key={id}
+              postId={id}
               username={post.username}
               caption={post.caption}
               imageUrl={post.imageUrl}
@@ -209,9 +210,8 @@ function App() {
         <div className="app__postsRight">
           <h1>Hello</h1>
           <InstagramEmbed
-            url="https://www.instagram.com/p/CREnUs4DJ8A/"
+            url="https://www.instagram.com/adidas/"
             maxWidth={320}
-            clientAccessToken='EAAHa6FrplMMBALNsI0pbJ2I9C6ivlCaZCHKvgON1G4sMxtDRGPPBzvmluWZCO2P4cSTCn2DgrbojL6PuiH2jueAwCOXVRb1g4pwooNOCVwZAF2liDZCM5ZB12ge4OI1hzbF2ag3hjUTZCZA7FYK3HZAFFmtj7ZAfgZBViu9kBktF7KTbktRpCXhQhMsdqrtTZAKPZCieKFIVn1TQ7tyW5Iac02dcz0T0rmVRoZCevfVZCZCWxHMWCEmPvRwUvbH'
             hideCaption={false}
             containerTagName="div"
             protocol=""
@@ -234,3 +234,6 @@ function App() {
 }
 
 export default App;
+
+
+// clientAccessToken='EAAHa6FrplMMBALNsI0pbJ2I9C6ivlCaZCHKvgON1G4sMxtDRGPPBzvmluWZCO2P4cSTCn2DgrbojL6PuiH2jueAwCOXVRb1g4pwooNOCVwZAF2liDZCM5ZB12ge4OI1hzbF2ag3hjUTZCZA7FYK3HZAFFmtj7ZAfgZBViu9kBktF7KTbktRpCXhQhMsdqrtTZAKPZCieKFIVn1TQ7tyW5Iac02dcz0T0rmVRoZCevfVZCZCWxHMWCEmPvRwUvbH'//
