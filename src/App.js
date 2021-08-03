@@ -6,7 +6,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import { Button, Input } from "@material-ui/core";
 import ImageUpload from "./ImageUpload";
-import InstagramEmbed from "react-instagram-embed";
+import { AiFillHome } from 'react-icons/ai';
+
 
 function getModalStyle() {
   const top = 50;
@@ -185,6 +186,8 @@ function App() {
           src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"
           alt="instagram"
         />
+        <div>
+        <Button><AiFillHome style={{fontSize:"20px"}}/></Button>
         {user ? (
           <Button onClick={() => auth.signOut()}>Logout</Button>
         ) : (
@@ -193,6 +196,7 @@ function App() {
             <Button onClick={() => setOpen(true)}>Sign Up</Button>
           </div>
         )}
+        </div>
       </div>
 
       <div className="app__posts">
@@ -210,18 +214,7 @@ function App() {
         </div>
         <div className="app__postsRight">
           <h1>Hello</h1>
-          <InstagramEmbed
-            url="https://www.instagram.com/adidas/"
-            maxWidth={320}
-            hideCaption={false}
-            containerTagName="div"
-            protocol=""
-            injectScript
-            onLoading={() => {}}
-            onSuccess={() => {}}
-            onAfterRender={() => {}}
-            onFailure={() => {}}
-          />
+          
         </div>
       </div>
 
